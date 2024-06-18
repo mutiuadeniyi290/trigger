@@ -18,7 +18,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: apache2-installed
-          path: apache2-installed.tar.gz
+          path: .
+
+      - name: Extract Apache Artifact
+        run: tar -xvzf apache2-installed.tar.gz -C /usr/sbin  
 
       - name: Build Docker image
         run: |
