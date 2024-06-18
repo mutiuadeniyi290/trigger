@@ -21,8 +21,4 @@ jobs:
       - name: Verify Apache2 Installation
         run: apache2 -v
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: apache2-installed
-          path: apache2-installed.tar.gz
+    
