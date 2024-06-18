@@ -1,3 +1,5 @@
+
+FROM ubuntu:20.04
 # Install apache2
 RUN apt-get update && apt-get install -y apache2
 
