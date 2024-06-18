@@ -18,7 +18,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: apache2-installed
-          path: /usr/sbin
+          path: apache2-installed.tar.gz
 
       - name: Build Docker image
         run: |

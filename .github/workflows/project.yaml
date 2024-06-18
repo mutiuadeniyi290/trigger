@@ -25,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: apache2-installed
-          path: /usr/sbin/apache2
+          path: apache2-installed.tar.gz
