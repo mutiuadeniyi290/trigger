@@ -1,0 +1,28 @@
+name: Install Apache
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install_apache:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Apache2
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y apache2
+          
+      - name: Verify Apache2 Installation
+        run: apache2 -v
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: apache2-installed
+          path: /usr/sbin/apache2
