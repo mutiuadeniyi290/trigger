@@ -3,7 +3,7 @@ name: Install Apache
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   install_apache:
